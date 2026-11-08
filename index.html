@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dollar Rates</title>
+  <meta name="description" content="Live US dollar exchange rates against major currencies.">
+  <meta name="theme-color" content="#EDF1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1B15" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Dollar Rates">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <label class="ask">
+        <input id="amount" type="number" inputmode="decimal" min="0" step="any" value="1" aria-label="Amount in US dollars">
+        <span>US dollars buy</span>
+      </label>
+    </header>
+
+    <ul id="list"></ul>
+
+    <footer>
+      <p id="status" role="status">Loading rates…</p>
+      <p class="key">Green means the dollar buys more than before. Red means it buys less.</p>
+      <div class="actions">
+        <button id="refresh" type="button">Refresh now</button>
+        <button id="install" type="button" hidden>Add to home screen</button>
+      </div>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
